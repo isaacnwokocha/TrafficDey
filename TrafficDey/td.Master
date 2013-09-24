@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="td.master.cs" Inherits="TrafficDey.td" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="bs/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+    <%--<link type="text/css" rel="stylesheet" href="bs/bootstrap.min.css" />--%>
+
+    <!--jQuery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <script type="text/javascript" src="bs/dist/js/bootstrap.min.js"></script>
+    <!--modal-->
+    <script src="../boot/js/modal.js"></script>
+    <!--Google Maps script-->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB184rsTlf4VjJADOit2siLd_XkTzx3ov4&sensor=false"></script>
+
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../default.aspx">
+                        <img src="../img/logo.png" alt="TrafficDey logo" /></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
+
+                    <asp:LoginView runat="server">
+                        <AnonymousTemplate>
+
+
+                            <span class="btn-group">
+                                <a href="#checkTraffic" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-search'></span>&nbsp;Check Traffic</a>
+                                <a href="#reportTraffic" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Report Traffic</a>
+                            </span>
+                            <span class="btn-group">
+                               <%-- <a href="#" class="btn navbar-btn btn-default"><span class='glyphicon glyphicon-user'></span>&nbsp;My Account</a>--%>
+                                <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-road'></span>&nbsp;My Routes</a>
+                                <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-star'></span>&nbsp;My Points</a>
+                            </span>
+                            <%--<span class="btn-group">
+                                <a href="#loginPanel" class="btn navbar-btn btn-default" data-toggle="modal"><span class='glyphicon glyphicon-lock'></span>&nbsp;Login</a>
+                                <a href="#" class="btn navbar-btn btn-default" data-toggle="modal"><span class='glyphicon glyphicon-lock'></span>&nbsp;Logout</a>
+                            </span>--%>
+
+                             <span class="btn-group nav navbar-nav navbar-right" style="margin-left:0px;margin-right:10px">
+                        <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-user'></span>&nbsp;mails.ibanga@yahoo.com</a>
+                        <a href="#" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-lock'></span>&nbsp;Logout</a>
+                    </span>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <a href="#reportTraffic" class="btn navbar-btn btn-default" data-toggle="modal"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Report Traffic</a>
+                            <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-user'></span>&nbsp;mails.ibanga@yahoo.com</a>
+                            <a href="#" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-lock'></span>&nbsp;Logout</a>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+
+
+                    <%--<ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Report Traffic</a></li>
+                                <li><a href="#">My Routes</a></li>
+
+                                <li class="divider"></li>
+                                <li><a href="#">Reward Centre</a></li>
+                                <li><a href="#">My Account</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>--%>
+                   
+
+
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </header>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr style="border-color: #cccccc; border-width: 2px" />
+            <footer class="float-right">
+                &copy; <%Response.Write(DateTime.Now.Year.ToString()); %> TrafficDey. All rights reserved.
+            </footer>
+        </div>
+
+
+
+        <!--Check Traffic Modal-->
+        <div class="modal fade " id="checkTraffic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-search'></span>&nbsp;Check Traffic</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                Enter a route to check traffic...
+                       
+                           <div class="input-group input-group-lg">
+                               <span class="input-group-addon"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;</span>
+
+                               <asp:TextBox runat="server" ID="txtTrafficLocation" required="required" CssClass="form-control" placeholder="Enter Location"></asp:TextBox>
+                           </div>
+
+                                <asp:Button runat="server" ID="btnSearch" CssClass="btn btn-primary navbar-btn float-right" Text="Get Traffic Report" OnClick="btnSearch_Click"></asp:Button>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                         
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+        
+
+        <!--Report Traffic Modal-->
+        <div class="modal fade " id="reportTraffic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Report Traffic For Your Location</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        Select the appropriate option to indicate the current traffic density in your location.
+                        <div class="list-group">
+                            <a href="#" class="list-group-item ">
+                                <h4 class="list-group-item-heading"><span class="label label-danger"><span class='glyphicon glyphicon-ban-circle'></span>&nbsp;Very Heavy</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+
+                            <a href="#" class="list-group-item active">
+                                <h4 class="list-group-item-heading"><span class="label label-warning"><span class='glyphicon glyphicon-warning-sign'></span>&nbsp;Mild</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+                            <a href="#" class="list-group-item ">
+                                <h4 class="list-group-item-heading"><span class="label label-success"><span class='glyphicon glyphicon-ok-circle'></span>&nbsp;Good</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+
+                        </div>
+
+                        <hr />
+                        <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary  float-right" Text="Submit Traffic Report"></asp:Button>
+
+
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--Login Modal-->
+        <div class="modal fade " id="loginPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-user'></span>&nbsp;Login</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <asp:RadioButton ID="radReturnUser" AutoPostBack="true" Checked="true" CssClass="radio" Text="I have an account" runat="server" OnCheckedChanged="radReturnUser_CheckedChanged" GroupName="login" />
+                                <asp:RadioButton ID="radNewUser" AutoPostBack="true" CssClass="radio" GroupName="login" Text="I'm a new user" OnCheckedChanged="radNewUser_CheckedChanged" runat="server" />
+                                <asp:Panel CssClass="input-group input-group-lg" runat="server" ID="pnlLogin">
+                                    <span class="input-group-addon">@</span>
+                                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                </asp:Panel>
+                                <asp:Panel runat="server" Visible="false" CssClass="input-group input-group-lg" ID="pnlCreate">
+                                    <span class="input-group-addon">@</span>
+                                    <asp:TextBox runat="server" ID="txtEmailNew" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                </asp:Panel>
+                                <br />
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon"><span class='glyphicon glyphicon-lock'></span>&nbsp;</span>
+
+                                    <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                </div>
+                                <br />
+                                <asp:Button runat="server" ID="btnNewAcc" CssClass="btn btn-primary float-right" Visible="false" Text="Create Account"></asp:Button>
+                                <asp:Button runat="server" ID="btnLogin" CssClass="btn btn-primary  float-right" Text="Login"></asp:Button>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+    </form>
+</body>
+</html>

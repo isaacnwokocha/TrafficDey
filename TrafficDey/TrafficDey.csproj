@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{562BD4D2-5FE0-47B2-AD65-57E18790CEDD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrafficDey</RootNamespace>
+    <AssemblyName>TrafficDey</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boot\assets\css\docs.css" />
+    <Content Include="boot\assets\css\pygments-manni.css" />
+    <Content Include="boot\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="boot\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="boot\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="boot\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="boot\assets\ico\favicon.png" />
+    <Content Include="boot\assets\js\application.js" />
+    <Content Include="boot\assets\js\customizer.js" />
+    <Content Include="boot\assets\js\filesaver.js" />
+    <Content Include="boot\assets\js\holder.js" />
+    <Content Include="boot\assets\js\html5shiv.js" />
+    <Content Include="boot\assets\js\jquery.js" />
+    <Content Include="boot\assets\js\jszip.js" />
+    <Content Include="boot\assets\js\less.js" />
+    <Content Include="boot\assets\js\raw-files.js" />
+    <Content Include="boot\assets\js\respond.min.js" />
+    <Content Include="boot\assets\js\uglify.js" />
+    <Content Include="bs\dist\css\bootstrap-theme.css" />
+    <Content Include="bs\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bs\dist\css\bootstrap.css" />
+    <Content Include="bs\dist\css\bootstrap.min.css" />
+    <Content Include="bs\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bs\dist\js\bootstrap.js" />
+    <Content Include="bs\dist\js\bootstrap.min.js" />
+    <Content Include="checktraffic.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="boot\dist\css\bootstrap-theme.css" />
+    <Content Include="boot\dist\css\bootstrap-theme.min.css" />
+    <Content Include="boot\dist\css\bootstrap.css" />
+    <Content Include="boot\dist\css\bootstrap.min.css" />
+    <Content Include="boot\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="boot\dist\js\bootstrap.js" />
+    <Content Include="boot\dist\js\bootstrap.min.js" />
+    <Content Include="boot\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="default.aspx" />
+    <Content Include="geo.html" />
+    <Content Include="geolocator.js" />
+    <Content Include="img\logo.png" />
+    <Content Include="boot\js\affix.js" />
+    <Content Include="boot\js\alert.js" />
+    <Content Include="boot\js\bootstrap.js" />
+    <Content Include="boot\js\bootstrap.min.js" />
+    <Content Include="boot\js\button.js" />
+    <Content Include="boot\js\carousel.js" />
+    <Content Include="boot\js\collapse.js" />
+    <Content Include="boot\js\dropdown.js" />
+    <Content Include="boot\js\modal.js" />
+    <Content Include="boot\js\popover.js" />
+    <Content Include="boot\js\scrollspy.js" />
+    <Content Include="boot\js\tab.js" />
+    <Content Include="boot\js\tests\index.html" />
+    <Content Include="boot\js\tests\phantom.js" />
+    <Content Include="boot\js\tests\server.js" />
+    <Content Include="boot\js\tests\unit\affix.js" />
+    <Content Include="boot\js\tests\unit\alert.js" />
+    <Content Include="boot\js\tests\unit\button.js" />
+    <Content Include="boot\js\tests\unit\carousel.js" />
+    <Content Include="boot\js\tests\unit\collapse.js" />
+    <Content Include="boot\js\tests\unit\dropdown.js" />
+    <Content Include="boot\js\tests\unit\modal.js" />
+    <Content Include="boot\js\tests\unit\phantom.js" />
+    <Content Include="boot\js\tests\unit\popover.js" />
+    <Content Include="boot\js\tests\unit\scrollspy.js" />
+    <Content Include="boot\js\tests\unit\tab.js" />
+    <Content Include="boot\js\tests\unit\tooltip.js" />
+    <Content Include="boot\js\tests\unit\transition.js" />
+    <Content Include="boot\js\tests\vendor\jquery.js" />
+    <Content Include="boot\js\tests\vendor\qunit.css" />
+    <Content Include="boot\js\tests\vendor\qunit.js" />
+    <Content Include="boot\js\tooltip.js" />
+    <Content Include="boot\js\transition.js" />
+    <Content Include="invertext.html" />
+    <Content Include="page.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="boot\_includes\ads.html" />
+    <Content Include="boot\_includes\footer.html" />
+    <Content Include="boot\_includes\header.html" />
+    <Content Include="boot\_includes\nav-components.html" />
+    <Content Include="boot\_includes\nav-css.html" />
+    <Content Include="boot\_includes\nav-customize.html" />
+    <Content Include="boot\_includes\nav-getting-started.html" />
+    <Content Include="boot\_includes\nav-javascript.html" />
+    <Content Include="boot\_includes\nav-main.html" />
+    <Content Include="boot\_includes\old-bs-docs.html" />
+    <Content Include="boot\_includes\social-buttons.html" />
+    <Content Include="boot\_layouts\default.html" />
+    <Content Include="boot\_layouts\home.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="checktraffic.aspx.cs">
+      <DependentUpon>checktraffic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checktraffic.aspx.designer.cs">
+      <DependentUpon>checktraffic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page.aspx.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page.aspx.designer.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="td.Master.cs">
+      <DependentUpon>td.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="td.Master.designer.cs">
+      <DependentUpon>td.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boot\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="boot\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="boot\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="boot\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="boot\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="boot\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="boot\js\.jshintrc" />
+    <Content Include="boot\less\alerts.less" />
+    <Content Include="boot\less\badges.less" />
+    <Content Include="boot\less\bootstrap.less" />
+    <Content Include="boot\less\breadcrumbs.less" />
+    <Content Include="boot\less\button-groups.less" />
+    <Content Include="boot\less\buttons.less" />
+    <Content Include="boot\less\carousel.less" />
+    <Content Include="boot\less\close.less" />
+    <Content Include="boot\less\code.less" />
+    <Content Include="boot\less\component-animations.less" />
+    <Content Include="boot\less\dropdowns.less" />
+    <Content Include="boot\less\forms.less" />
+    <Content Include="boot\less\glyphicons.less" />
+    <Content Include="boot\less\grid.less" />
+    <Content Include="boot\less\input-groups.less" />
+    <Content Include="boot\less\jumbotron.less" />
+    <Content Include="boot\less\labels.less" />
+    <Content Include="boot\less\list-group.less" />
+    <Content Include="boot\less\media.less" />
+    <Content Include="boot\less\mixins.less" />
+    <Content Include="boot\less\modals.less" />
+    <Content Include="boot\less\navbar.less" />
+    <Content Include="boot\less\navs.less" />
+    <Content Include="boot\less\normalize.less" />
+    <Content Include="boot\less\pager.less" />
+    <Content Include="boot\less\pagination.less" />
+    <Content Include="boot\less\panels.less" />
+    <Content Include="boot\less\popovers.less" />
+    <Content Include="boot\less\print.less" />
+    <Content Include="boot\less\progress-bars.less" />
+    <Content Include="boot\less\responsive-utilities.less" />
+    <Content Include="boot\less\scaffolding.less" />
+    <Content Include="boot\less\tables.less" />
+    <Content Include="boot\less\theme.less" />
+    <Content Include="boot\less\thumbnails.less" />
+    <Content Include="boot\less\tooltip.less" />
+    <Content Include="boot\less\type.less" />
+    <Content Include="boot\less\utilities.less" />
+    <Content Include="boot\less\variables.less" />
+    <Content Include="boot\less\wells.less" />
+    <Content Include="td.Master" />
+    <Content Include="bs\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bs\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bs\dist\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="boot\js\tests\unit %281%29\" />
+    <Folder Include="boot\js\tests\vendor %281%29\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:31808/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

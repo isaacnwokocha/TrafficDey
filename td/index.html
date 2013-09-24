@@ -1,0 +1,462 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bs/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+    
+
+    <!--jQuery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <script type="text/javascript" src="bs/dist/js/bootstrap.min.js"></script>
+    <!--modal-->
+    <script src="../boot/js/modal.js"></script>
+    <!--Google Maps script-->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB184rsTlf4VjJADOit2siLd_XkTzx3ov4&sensor=false"></script>
+
+    <!--Font-->
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form method="post" action="default.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="61+dG4ECRa992LYKzQj1vE9L4C7iFcWACtHbeqbPLl5KOF62guk4O5bku4340W6Nd5PdRdNvFqsOjKPQsqEvHpSZ1DIgdxuACKvhUqBilO1S+TekiaAO412n8rBBxIq7FohMcGG4p3a5YfxTl6eiT9fZswWiYWCx7ZnyI6nehGS+g6iQcKwA8RxQI2y/bJUoN9topmGBZB/7zzqiRW7+8Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZBFbxMMOe_d5ds9mAiTxS2NP5jN3LjI-bce9-sgncas18kqltAFbFL2jJief7QKU0w2&amp;t=634971751065510185" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQmXdPSdBqefRIC4Kt0u3yrWKX0mVEuSwr6FjxPw016wt1DTDIStyLmxf13wTKyxAho_52d1vVoKWFfP_xVXTXJh5ia5RrVUIdtFkk8ApPsogtlVzHQdqNY55JiHwj3KK2jKLoTSr1wYP1pLpy9xq7VU1&amp;t=6119e399" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tV5de6Vblniycfvv8K8WkAamVLyXXKS8V_HMudnCIUhbPjYWYi5nmxsrWZ7_4ohetC_FEEmEttY7iCzhRLRWrHCUNj4DuIF6XA5yIzqmfnBoCcnAIJDjiS5_4kWb1-88nuLQylQWVYGwfxTVqq77DNYaMTcT5hSXFWLXQQ99WfNx0&amp;t=6119e399" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ahJ1TJrujfz7EVT9EuBeHUiOrNOCjGD//Ze7zhGpgr+BwO0a2CZNOxllhQ+IZOHLwO9z+ahJwhpdU28rIJ7cE//nf4FuHQXj5T07MQbAUj68SUVtUV8hCYORQTddJnTGeLG9QuxiDgco32WS7UvCwHC9SI/v7msjk+g8rkjfe7TbzouIpI8puZ7wVezuQy94iIBWd/osT26Non25jVuclJ6k3WCqmvkjcL3vlF3naIYGVEUcRa5O96nalqJM8xVlQ3jdQCog2PDI5KhcfzFsZg==" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$ctl06','ctl06','tctl00$ctl08','ctl08'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../default.aspx">
+                        <img src="../img/logo.png" alt="TrafficDey logo" /></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
+
+                    
+
+
+                            <span class="btn-group">
+                                <a href="#checkTraffic" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-search'></span>&nbsp;Check Traffic</a>
+                                <a href="#reportTraffic" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Report Traffic</a>
+                            </span>
+                            <span class="btn-group">
+                               
+                                <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-road'></span>&nbsp;My Routes</a>
+                                <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-star'></span>&nbsp;My Points</a>
+                            </span>
+                            
+
+                             <span class="btn-group nav navbar-nav navbar-right" style="margin-left:0px;margin-right:10px">
+                        <a href="#" class="btn navbar-btn btn-primary"><span class='glyphicon glyphicon-user'></span>&nbsp;mails.ibanga@yahoo.com</a>
+                        <a href="#" class="btn navbar-btn btn-primary" data-toggle="modal"><span class='glyphicon glyphicon-lock'></span>&nbsp;Logout</a>
+                    </span>
+                        
+
+
+                    
+                   
+
+
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </header>
+        <div id="main">
+            
+    <section id="wrapper">
+
+
+        <meta name="viewport" content="width=620" />
+
+        
+        <article id="location">
+            <span class="largetext"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Status: <span id="status" class="label label-primary">Checking...</span>
+
+                <br />
+                <span class="smalltext" id="currentLoc">Loading location...</span>
+                
+            </span>
+            <hr style="margin-bottom: 2px; margin-top: 2px" />
+            <span class="largetext"><span class='glyphicon glyphicon-star-empty'></span>&nbsp;Traffic</span>
+        </article>
+        
+        <div id="mapcanvas" style="height: 600px"></div>
+        <script type="text/javascript">
+
+            //label for current loc
+            var currenLoclbl = document.getElementById('currentLoc');
+
+            //Current status
+            var checkStatus = document.querySelector('#status');
+
+            //initialize geocoder
+            var geocoder = new google.maps.Geocoder();
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+            }
+            else {
+                currenLoclbl.innerHTML = "Your browser does not support Geolocation!";
+            }
+            //Get the latitude and the longitude;
+            function successFunction(position) {
+                //update status label
+                checkStatus.innerHTML = "Found!";
+                checkStatus.className = "label label-success";
+
+                //get coords
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+
+
+
+                //get current location
+                //codeLatLng(lat, lng);
+
+                //load map of current location
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var myOptions = {
+                    zoom: 15,
+                    center: latlng,
+                    mapTypeControl: false,
+                    navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+
+                //custom location image
+                var image = {
+                    url: 'img/marker_currpos.png'
+                    //size: new google.maps.Size(70, 30)
+                }
+
+                //marker
+                var marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE,
+                    draggable: true,
+
+                    title: "You are here! (at least within a " + position.coords.accuracy + " meter radius)"
+                });
+
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<b>You are here!</b><br/>At least within a " + position.coords.accuracy + " meter radius"
+                });
+
+                infowindow.open(map, marker);
+
+                //get address
+                GetAddress(position.coords.latitude, position.coords.longitude);
+            }
+
+            function errorFunction(error) {
+                //update status label
+                checkStatus.innerHTML = "Not Found!";
+                checkStatus.className = "label label-danger";
+
+                switch (error.code) {
+                    //user denied permission
+                    case error.PERMISSION_DENIED:
+                        currenLoclbl.innerHTML = "You barred TrafficDey from getting your location!";
+                        break;
+                        //position could not be found
+                    case error.POSITION_UNAVAILABLE:
+                        currenLoclbl.innerHTML = "Your current location could not be loaded. Please try again!";
+                        break;
+                        //Timeout
+                    case error.TIMEOUT:
+                        currenLoclbl.innerHTML = "Retrieving your position timed out! Please reload the page.";
+                        break;
+                        //undefined error
+                    default:
+                        currenLoclbl.innerHTML = "An error occured. Please Reload the page!";
+                        break;
+                }
+
+            }
+
+            //function codeLatLng(lat, lng) {
+
+            //    //current user location
+            //    var currentUserLoc;
+
+            //    var latlng = new google.maps.LatLng(lat, lng);
+            //    geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            //        //check if geocoder is OK
+            //        if (status == google.maps.GeocoderStatus.OK) {
+            //            console.log(results)
+            //            if (results[1]) {
+
+            //                //update user's current location
+            //                currenLoclbl.innerHTML = results[0].formatted_address;
+
+            //            } else {
+            //                currenLoclbl.innerHTML = "No results found!";
+            //            }
+            //        }
+            //        else {
+            //            //geocoder has failed
+            //            alert("Geocoder failed due to: " + status);
+            //        }
+            //    });
+            //}
+
+            //===========================================================
+
+            //get street address
+            var streetaddress = position.coords.latitude;
+
+            var strlbl = document.querySelector('#street');
+            strlbl.innerHTML = streetaddress;
+
+            function GetAddress(lat, lng) {
+                var streetAddress = '';
+
+                var latlng = new google.maps.LatLng(lat, lng);
+                geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        console.log(results)
+                        if (results[1]) {
+                            //formatted address
+                            //alert(results[0].formatted_address)
+                            //find country name
+                            for (var i = 0; i < results[0].address_components.length; i++) {
+                                for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
+                                    if (results[0].address_components[i].long_name != 'undefined') {
+
+                                        //filter out only route, locality, admin level1, country
+                                        if (
+                                            (results[0].address_components[i].types[b] == "route") ||
+                                            (results[0].address_components[i].types[b] == "locality") ||
+                                            (results[0].address_components[i].types[b] == "administrative_area_level_1") ||
+                                            (results[0].address_components[i].types[b] == "country")) {
+
+                                            streetAddress += results[0].address_components[i].long_name + ", ";
+                                        }
+                                    }
+
+                                    //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+                                    //if (results[0].address_components[i].types[b] == "street_number") {
+                                    //    //this is the object you are looking for
+                                    //    city = results[0].address_components[i];
+                                    //    break;
+                                    //}
+                                }
+                            }
+
+                            //trim out last comma and space
+                            streetAddress = streetAddress.substring(0, streetAddress.length - 2) + ".";
+
+                            currenLoclbl.innerHTML = streetAddress;
+
+                            // alert(streetAddress);
+                            //city data
+                            // alert(city.short_name + " " + city.long_name)
+
+
+                        } else {
+                            alert("No results found");
+                        }
+                    } else {
+                        alert("Geocoder failed due to: " + status);
+                    }
+                });
+            }
+            //===========================================================
+        </script>
+        
+    </section>
+
+
+            <hr style="border-color: #cccccc; border-width: 2px" />
+            <footer class="float-right">
+                &copy; 2013 TrafficDey. All rights reserved.
+            </footer>
+        </div>
+
+
+
+        <!--Check Traffic Modal-->
+        <div class="modal fade " id="checkTraffic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-search'></span>&nbsp;Check Traffic</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        <div id="ctl06">
+	
+                                Enter a route to check traffic...
+                       
+                           <div class="input-group input-group-lg">
+                               <span class="input-group-addon"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;</span>
+
+                               <input name="ctl00$txtTrafficLocation" type="text" id="txtTrafficLocation" class="form-control" required="required" placeholder="Enter Location" />
+                           </div>
+
+                                <input type="submit" name="ctl00$btnSearch" value="Get Traffic Report" id="btnSearch" class="btn btn-primary navbar-btn float-right" />
+                            
+</div>
+                         
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+        
+
+        <!--Report Traffic Modal-->
+        <div class="modal fade " id="reportTraffic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-map-marker'></span>&nbsp;Report Traffic For Your Location</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        Select the appropriate option to indicate the current traffic density in your location.
+                        <div class="list-group">
+                            <a href="#" class="list-group-item ">
+                                <h4 class="list-group-item-heading"><span class="label label-danger"><span class='glyphicon glyphicon-ban-circle'></span>&nbsp;Very Heavy</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+
+                            <a href="#" class="list-group-item active">
+                                <h4 class="list-group-item-heading"><span class="label label-warning"><span class='glyphicon glyphicon-warning-sign'></span>&nbsp;Mild</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+                            <a href="#" class="list-group-item ">
+                                <h4 class="list-group-item-heading"><span class="label label-success"><span class='glyphicon glyphicon-ok-circle'></span>&nbsp;Good</span></h4>
+                                <p class="list-group-item-text">Some text to describe the traffic situation above</p>
+                            </a>
+
+                        </div>
+
+                        <hr />
+                        <input type="submit" name="ctl00$Button1" value="Submit Traffic Report" id="Button1" class="btn btn-primary  float-right" />
+
+
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--Login Modal-->
+        <div class="modal fade " id="loginPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel panel-default">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><span class='glyphicon glyphicon-user'></span>&nbsp;Login</h4>
+                    </div>
+                    <div class="modal-body panel-body">
+                        <div id="ctl08">
+	
+                                <span class="radio"><input id="radReturnUser" type="radio" name="ctl00$login" value="radReturnUser" checked="checked" /><label for="radReturnUser">I have an account</label></span>
+                                <span class="radio"><input id="radNewUser" type="radio" name="ctl00$login" value="radNewUser" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$radNewUser\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="radNewUser">I'm a new user</label></span>
+                                <div id="pnlLogin" class="input-group input-group-lg">
+		
+                                    <span class="input-group-addon">@</span>
+                                    <input name="ctl00$txtEmail" type="text" id="txtEmail" class="form-control" placeholder="Email" />
+                                
+	</div>
+                                
+                                <br />
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon"><span class='glyphicon glyphicon-lock'></span>&nbsp;</span>
+
+                                    <input name="ctl00$txtPassword" type="text" id="txtPassword" class="form-control" placeholder="Password" />
+                                </div>
+                                <br />
+                                
+                                <input type="submit" name="ctl00$btnLogin" value="Login" id="btnLogin" class="btn btn-primary  float-right" />
+                            
+</div>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+    </form>
+</body>
+</html>
